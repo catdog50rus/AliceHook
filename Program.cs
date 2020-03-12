@@ -13,14 +13,12 @@ namespace AliceHook
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            StartServer();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+        private static void StartServer()
+        {
+            new WebHostBuilder().UseKestrel().UseStartup<Startup>().Build().Run();
+        }
     }
 }
