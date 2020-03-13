@@ -32,9 +32,8 @@ namespace AliceHook
             { 
                 options.AllowSynchronousIO = true; 
             });
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration["Data:AliceHook:ConnectionString"]));
+
+            services.AddDbContext<ApplicationDbContext>();
         }
 
         public void Configure(IApplicationBuilder app)

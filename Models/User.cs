@@ -9,7 +9,7 @@ namespace AliceHook.Models
     public class User
     {
         [Key]
-        public string Id { get; set; }
+        public int Id { get; set; }
         public List<WebHook> WebHooks { get; set; }
     }
 }
