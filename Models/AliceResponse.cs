@@ -24,7 +24,7 @@ namespace AliceHook.Models
         public string Title { get; set; }
         public Payload Payload { get; set; }
         public string Url { get; set; }
-        public bool Hide { get; set; }
+        public bool Hide { get; set; } = true;
     }
 
     public class Response
